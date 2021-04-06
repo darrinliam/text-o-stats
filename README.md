@@ -49,15 +49,15 @@ The request is a JSON object whose only required key is `"text"`. Example:
 Currently supported options:
 
 `"skipFirst" : <number> `          
-> Skips the first <number> lines of the text. Use this option when your text has a title/author header.
+  * Skips the first <number> lines of the text. Use this option when your text has a title/author header.
 
    
 `"omitWords": ["omitword1", "omitword2", ...]`
-> Supplies list of words to omit when calculating the most frequently used words and average word length. The default is ["a", "an", "the"].
+  * Supplies list of words to omit when calculating the most frequently used words and average word length. The default is ["a", "an", "the"].
 
 `"maxDispWords": <number>`
 
-> Indicates the maximum number of words to return for the longest words array and most frequently used words array. The default is 3.
+  * Indicates the maximum number of words to return for the longest words array and most frequently used words array. The default is 3.
 
 
 
@@ -79,7 +79,7 @@ Structure of a successful response:
   "maxWordFreq": [
     [
       <number>,
-      <string>,
+      <string>
     ],
     ...
   ],
