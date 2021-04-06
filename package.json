@@ -1,0 +1,25 @@
+{
+  "name": "word-stat",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server/texsrv.js",
+    "devstart": "eslint **/*.js && node server/expsrv.js",
+    "test": "mocha --timeout 2000 --exit"
+  },
+  "author": "Darrin DuFord",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "compression": "^1.7.4",
+    "eslint": "^7.23.0",
+    "express": "^4.17.1",
+    "mathjs": "^9.3.0"
+  },
+  "devDependencies": {
+    "chai": "^4.3.4",
+    "chai-http": "^4.3.0",
+    "mocha": "^8.3.2"
+  }
+}

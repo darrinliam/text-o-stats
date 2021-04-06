@@ -1,0 +1,18 @@
+{
+    "env": {
+	    "commonjs": true,
+        "es6": true,
+        "node": true
+    },
+    "extends": "eslint:recommended",
+    "parserOptions": {
+        "ecmaVersion": 12,
+        "sourceType": "module"
+    },
+    "rules": {
+	  "eqeqeq": 1,
+	  "no-var": "error",
+	  "no-mixed-spaces-and-tabs": "off",
+	  "no-cond-assign" : "off"
+    }
+}
