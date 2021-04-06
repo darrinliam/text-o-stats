@@ -1,12 +1,12 @@
 # text-o-stats
 
-text-o-stats computes statistics about a given body of text via a RESTful API to a Node / Express server. The caller provides the text in the body of a POST request. The response contains the following data:
+text-o-stats computes statistics on a given body of text via a RESTful API request to a Node / Express server. The caller provides the text in the body of a POST request. The response contains the following data:
 
 * word count
 * sentence count
 * average words per sentence
 * standard deviation of the sentence lengths
-  * a measure of variation in sentence length over the entire body of text. Generally, more variety is better. But there are always exceptions.
+  * a measure of variation in sentence length over the entire body of text. A smaller number means most of the sentences are around the same length (they don't deviate much from the average length). Generally, more variety is better. But there are always exceptions.
 * longest words
 * longest word length
 * most frequently used words
@@ -14,7 +14,7 @@ text-o-stats computes statistics about a given body of text via a RESTful API to
 * average consecutive difference of sentence length
   * a measure of variation in back-to-back sentence length. A body of text that has a lot of variety in back-to-back sentence length tends to flow more easily than a body of text that contains sentences of roughly the same length. Generally, more variety is better. Again, there are always exceptions.
 
-The intention of this project is not to quantify the craft of writing. The data supplied is meant to offer writers some insight that may assist them in sharpening their craft.
+The intention of this project is not to quantify the craft of writing. The generated data is meant to offer writers some insight that may assist them in sharpening their craft.
 
 Not all types of lexical constructs are supported at this time. Known issues: text containing words with dots, such as Mr., Mrs,. and i.e. They will be handled in a future commit.
 
@@ -88,7 +88,7 @@ Structure of a successful response:
 }
 ```
 
-## Server options
+## Server Options
 
 To change the port, run `npm start  --port <myport#>` 
 
