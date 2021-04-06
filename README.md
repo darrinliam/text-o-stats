@@ -24,21 +24,23 @@ The input text is expected to be prose. Poetry is not supported.
 
 Clone the repository or download the zip and expand in an empty directory, then in the directory containg package.json, run:
 
-### `npm install`
+`npm install`
 
 ## Usage
 
 Start the server with:
 
-### `npm start`
+`npm start`
 
-Send your request in the body of a POST request via curl or postman. For a sample call, `cd` to the ./examples directory and run the following `curl` command:
+Send your request in the body of a POST request via curl or postman. For a sample call, `cd` to the `./examples` directory and run the following `curl` command:
 
-### `curl --request POST -H "Content-Type: application/json" --data @poker.json http://localhost:3001/api/v1/textostats`
+`curl --request POST -H "Content-Type: application/json" --data @poker.json http://localhost:3001/api/v1/textostats`
 
 
 
 ## Request Options
+
+The API currently supports one endpoint, `/api/v1/textostats` .
 
 The request is a JSON object whose only required key is `"text"`. Example:
 
@@ -47,17 +49,16 @@ The request is a JSON object whose only required key is `"text"`. Example:
 Currently supported options:
 
 `"skipFirst" : <number> `          
-> Skip the first <number> lines of the text. Use this option when your text has a title/author header.
+> Skips the first <number> lines of the text. Use this option when your text has a title/author header.
 
    
 `"omitWords": ["omitword1", "omitword2", ...]`
-> List of words to omit when calculating the most frequently used words and average word length. The default is ["a", "an", "the"].
+> Supplies list of words to omit when calculating the most frequently used words and average word length. The default is ["a", "an", "the"].
 
 `"maxDispWords": <number>`
 
-> Maximum number of words to return for the longest words and most frequently used words.
+> Indicates the maximum number of words to return for the longest words array and most frequently used words array. The default is 3.
 
-A complete openapi.json for the request and response will be included in a future commit.
 
 
 ## Response Object
