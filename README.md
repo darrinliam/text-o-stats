@@ -32,7 +32,7 @@ Start the server with:
 
 `npm start`
 
-Send your request in the body of a POST request via curl or postman. For a sample call, `cd` to the `./examples` directory and run the following `curl` command:
+Send your request in the body of a POST request via `curl` or Postman. For a sample call, `cd` to the `./examples` directory and run the following `curl` command:
 
 `curl --request POST -H "Content-Type: application/json" --data @poker.json http://localhost:3001/api/v1/textostats`
 
@@ -42,14 +42,14 @@ Send your request in the body of a POST request via curl or postman. For a sampl
 
 The API currently supports one endpoint, `/api/v1/textostats` .
 
-The request is a JSON object whose only required key is `"text"`. Example:
+The request body is a JSON object whose only required key is `"text"`. Example:
 
 `{ "text" : "This is a sample text. It contains two sentences."}`
 
 Currently supported options:
 
 `"skipFirst" : <number> `          
-  * Skips the first <number> lines of the text. Use this option when your text has a title/author header.
+  * Skips the first `<number>` lines of the text. Use this option when your text has a title/author header.
 
    
 `"omitWords": ["omitword1", "omitword2", ...]`
