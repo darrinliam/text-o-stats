@@ -77,9 +77,9 @@ srv.on('connection', (connection) => {
   console.log("Adding connection.");
   connectionList.push(connection);
   connection.on('close', () => {
-	for (let i = 0; i < connections.length; i++) {
-		if (connections[i] === connection) {
-			connections.splice(i,1);  // Remove connection from list. Modify array in place
+	for (let i = 0; i < connectionList.length; i++) {
+		if (connectionList[i] === connection) {
+			connectionList.splice(i,1);  // Remove connection from list. Modify array in place
 			break;
 		}
 	}
