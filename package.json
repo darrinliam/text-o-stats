@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node server/texsrv.js",
-    "devstart": "eslint **/*.js && node server/expsrv.js",
+    "devstart": "eslint **/*.js && node server/texsrv.js",
     "test": "mocha --timeout 2000 --exit"
   },
   "author": "Darrin DuFord",

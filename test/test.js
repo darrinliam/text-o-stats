@@ -4,7 +4,7 @@
 
 const chai = require('chai');
 const chaiHttp = require('chai-http');
-const should = chai.should();
+chai.should();
 
 const texsrv = require('./../server/texsrv.js');
 
