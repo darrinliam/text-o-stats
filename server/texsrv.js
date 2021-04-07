@@ -62,7 +62,7 @@ if (args.verbose) {
   console.log("Running in verbose mode.");
   setInterval(() => srv.getConnections(
     (err, openConnections) => console.log(`${openConnections} connections currently open`)
-  ), 1000); // every second, log the # of connections
+  ), 1000); // every second, log the # of open connections
 }
 
 console.log(`Running environment: ${process.env.NODE_ENV ? process.env.NODE_ENV : "not set"}`);
@@ -71,16 +71,18 @@ console.log(`Running environment: ${process.env.NODE_ENV ? process.env.NODE_ENV 
 process.on('SIGINT', shutDown); // ctrl-c
 process.on('SIGTERM', shutDown); // kill signal
 
-
 let connectionList = [];
 
 srv.on('connection', (connection) => {
   console.log("Adding connection.");
   connectionList.push(connection);
   connection.on('close', () => {
-    connectionList = connectionList.filter((curConn) => {
-      return (curConn !== connection);
-    });
+	for (let i = 0; i < connections.length; i++) {
+		if (connections[i] === connection) {
+			connections.splice(i,1);  // Remove connection from list. Modify array in place
+			break;
+		}
+	}
     console.log("Closed connection.");
   });
 });
