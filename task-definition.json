@@ -4,7 +4,7 @@
         "containerDefinitions": [
             {
                 "name": "textostats-app",
-                "image": "007431153856.dkr.ecr.us-east-2.amazonaws.com/ecr-textostats:latest",
+                "image": "httpd:2.4",
                 "cpu": 256,
                 "memoryReservation": 512,
                 "links": [],
