@@ -78,6 +78,6 @@ jobs:
       uses: aws-actions/amazon-ecs-deploy-task-definition@v1
       with:
         task-definition: ${{ steps.task-def.outputs.task-definition }}
-        service: textostats-app-service
-        cluster: cluster-default
+        service: textostats-ecs-service
+        cluster: textostats-app-cluster2
         wait-for-service-stability: true
