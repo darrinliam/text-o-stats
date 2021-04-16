@@ -1,10 +1,10 @@
 {
-    "family": "run-task1-def-textostats",
+    "family": "textostats-app2",
     "executionRoleArn": "arn:aws:iam::007431153856:role/ecsTaskExecutionRole",
 	"networkMode": "awsvpc",
     "containerDefinitions": [
         {
-            "name": "textostats-app",
+            "name": "textostats-app2",
             "image": "007431153856.dkr.ecr.us-east-2.amazonaws.com/ecr-textostats2:latest",
             "portMappings": [
                 {
