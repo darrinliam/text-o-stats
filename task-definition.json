@@ -5,7 +5,7 @@
     "containerDefinitions": [
         {
             "name": "textostats-app",
-			"image": "007431153856.dkr.ecr.us-east-2.amazonaws.com/ecr-textostats:latest",
+            "image": "007431153856.dkr.ecr.us-east-2.amazonaws.com/ecr-textostats2:latest",
             "portMappings": [
                 {
                     "containerPort": 3001,
@@ -14,7 +14,7 @@
                 }
             ],
             "essential": true
-		}
+        }
     ],
     "requiresCompatibilities": [
         "FARGATE"
